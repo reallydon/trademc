@@ -1,0 +1,454 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="keywords" content="minecraft, автодонат, онлайн-магазин, trademc">
+        <meta name="description" content="Trade MC :: Автоматический донат в Minecraft и других играх. Создай свой магазин и начни зарабатывать на своем сервере.">
+        <meta name="robots" content="all">
+        <meta name='yandex-verification' content='713c201a7deddbd2'>
+        <meta name="google-site-verification" content="kRdatORN4c46beSFOc09VIw3CWMIY0eXvbUm7qDjipw">
+        <meta name="webmoney" content="1B556E89-DFB2-4016-942E-44784FF0E693">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Trade MC">
+        <meta property="og:image" content="https://trademc.org/statics/images/og-image.jpg">
+        <meta property="og:description" content="Автоматический донат на ваш сервер.">
+        <meta property="og:url" content="https://trademc.org/server">
+        <title>Trade MC - Автоматический донат</title>
+        <link rel="icon" type="image/png" href="statics\images\favicon.png">
+        <link rel="stylesheet" type="text/css" href="statics\styles\main.less.css?79dea1913c5fe1d67c5dc6f86d9535f0">
+    </head>
+	<body>
+        <div class="mobile-block"><div class="menu-toggle-button"></div></div>
+        <nav class="menu">
+            <a class="logo" href="index.htm">Trade MC</a>
+            <div class="right">
+                <a href="autodonate.html">Игры</a>
+                <a href="about.html">О сервисе</a>
+                <a href="faq.html">ЧаВо</a>
+                <a href="catalog.html">Каталог проектов</a>
+                <a href="feedback.html">Обратная связь</a>
+                <a href="//panel.trademc.org/registration">Регистрация</a>
+                <a href="//panel.trademc.org/login">Вход в панель</a>
+            </div>
+        </nav>
+        <div id="content">
+                        <header class="short"></header>
+                        <main role="main">
+                <div class="wrapper clear-fix hide-s">
+                    <h1>Настройка сервера</h1>
+<ul class="list">
+    <li>
+        <a href="#mc">Minecraft</a><br>
+        1. <a href="#mc_default">Vanilla, Bukkit, Spigot, Spout</a><br>
+        2. <a href="#mc_pe">Pocket Edition</a><br>
+        3. <a href="#mc_bc">BungeeCord</a><br>
+        4. <a href="#mc_err">Проверка работы RCON и частые ошибки</a>
+    </li>
+    <li><a href="#samp">San Andreas Multiplayer</a></li>
+    <li><a href="#unturned">Unturned</a></li>
+    <li><a href="#ark">ARK: Survival Evolved</a></li>
+    <li><a href="#rust">Rust</a></li>
+    <li><a href="#mta">Multi Theft Auto</a></li>
+    <li><a href="#7daystodie">7 Days to Die</a></li>
+    <li><a href="#other">Остальные игры</a></li>
+    <li><a href="#mysql">MySQL</a></li>
+</ul>
+<h2 id="mc">Minecraft</h2>
+<h3 id="mc_default">Vanilla, Bukkit, Spigot, Spout</h3>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Откройте файл server.properties в корневой папке сервера (возможно, просто файл server).<br>
+    2. Добавьте в файл следующие строки:<br>
+    <pre>rcon.port=4445 #(можно изменить в настройках магазина)
+rcon.password=ключ_магазина</pre>
+    3. Найдите опцию enable-rcon и измените ее значение на true (enable-rcon=true)<br>
+    4. Замените "ключ_магазина" на ключ магазина со страницы "мои магазины".<br>
+    5. Сделайте рестарт сервера.<br>
+    Отлично! Ваш сервер успешно настроен.<br>
+
+<div class="show-pre">
+    <span class="link">Пример успешно настроенного стандартного конфига</span>
+    <pre>spawn-protection=16
+query.port=25565
+generator-settings=
+force-gamemode=false
+allow-nether=true
+gamemode=0
+enable-query=true
+player-idle-timeout=0
+difficulty=1
+spawn-monsters=true
+op-permission-level=4
+announce-player-achievements=true
+pvp=true
+snooper-enabled=true
+level-type=DEFAULT
+hardcore=false
+enable-command-block=false
+max-players=20
+rcon.port=4445
+server-port=25565
+debug=false
+server-ip=
+spawn-npcs=true
+allow-flight=false
+level-name=world
+view-distance=10
+resource-pack=
+spawn-animals=true
+white-list=false
+rcon.password=Ваш_ключ
+generate-structures=true
+online-mode=true
+max-build-height=256
+level-seed=
+motd=A Minecraft Server
+enable-rcon=true</pre>
+</div>
+<h3 id="mc_pe">Pocket Edition</h3>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Откройте файл server.properties в корневой папке сервера (возможно, просто файл server).<br>
+    2. Добавьте в файл следующую строку:<br>
+    <pre>rcon.password=ключ_магазина</pre>
+    3. Найдите опцию enable-rcon и измените ее значение на on (enable-rcon=on)<br>
+    4. Замените "ключ_магазина" на ключ магазина со страницы "мои магазины".<br>
+    5. Сделайте рестарт сервера.<br>
+    6. Укажите порт сервера в поле "порт RCON", в настройках магазина.<br>
+    Отлично! Ваш сервер успешно настроен.
+
+<div class="show-pre">
+    <span class="link">Пример успешно настроенного конфига для Pocket Edition</span>
+    <pre>motd=Minecraft: PE Server
+server-port=19132
+memory-limit=-1
+white-list=off
+announce-player-achievements=on
+spawn-protection=16
+max-players=20
+allow-flight=off
+spawn-animals=on
+spawn-mobs=on
+gamemode=0
+force-gamemode=off
+hardcore=off
+pvp=on
+difficulty=1
+generator-settings=
+level-name=world
+level-seed=
+level-type=DEFAULT
+enable-query=on
+enable-rcon=on
+rcon.password=Ваш_ключ
+auto-save=on</pre>
+</div>
+<h3 id="mc_bc">BungeeCord</h3>
+<ul class="list">
+    <li>
+        Если необходимо подключиться к самому серверу BungeeCord:
+        <p>
+            Необходимо скачать и настроить плагин <a href="https://www.spigotmc.org/resources/bungeecord-rcon.5817/" rel="nofollow" target="_blank">Bungeecord RCON</a>.<br>
+            1. Установите на сервер Bungeecord плагин <a href="https://www.spigotmc.org/resources/yamler.315/" rel="nofollow" target="_blank">Yamler</a>.<br>
+            2. Установите на сервер Bungeecord плагин <a href="https://www.spigotmc.org/resources/bungeecord-rcon.5817/" rel="nofollow" target="_blank">Bungeecord RCON</a>.<br>
+            3. Настройте Bungeecord RCON, согласно инструкции на странице плагина.<br>
+            Отлично! Ваш сервер успешно настроен.
+        </p>
+        <span class="show-pre">
+            <span class="link">Пример успешно настроенного конфига Bungeecord RCON</span>
+            <pre>Rcon_Enabled = true;
+Rcon_Port = 4445;
+Rcon_Password = "Ваш_ключ";
+Rcon_Colored = true;</pre>
+        </span>
+    </li>
+    <li style="margin-top:20px">
+        Если необходимо подключиться к серверам в сети BungeeCord:
+        <p>
+            Если сервера в сети BungeeCord доступны как самостоятельные сервера и войти на эти сервера можно напрямую, то подключиться к данным серверам по RCON можно 
+            точно так же, как и к <a href="#mc_default">обычному серверу</a>.
+        </p>
+    </li>
+    <li style="margin-top:20px">
+        Если сервера в сети BungeeCord доступны только по 127.0.0.1:
+        <p>
+            Если сервера в вашей сети BungeeCord доступны только по локальному IP-адресу, то в данном случае необходимо сделать следующее:<br>
+            1. Запустите новый сервер, выделив ему 200-300 МБ. В настройках сервера включите whitelist, чтобы на него никто не смог зайти.<br>
+            2. Если вам необходимо выполнять команды на всех серверах, то подключите сервер к сети BungeeCord и перейдите к пункту ниже. Если вам необходимо выполнить команду, 
+            которая сделает изменения в БД (например, выдача прав), то просто установите на данный сервер плагин, реализующий данную команду. В этом случае сервер подключать к сети BungeeCord
+            необязательно.<br>
+            Все готово. Прекрасная работа!
+        </p>
+    </li>
+    <li style="margin-top:20px">
+        Если необходимо выполнять какие-то команды на всех серверах в сети BungeeCord одновременно:
+        <p>
+            Для этого вам необходим плагин для BungeeCord: <a rel="nofollow" href="https://www.spigotmc.org/resources/commandsync.52093/" target="_blank">Command Sync</a>.<br>
+            Используя его, можно выполнять команды на всех серверах, соединенных с помощью BungeeCord.<br>
+            1. Установите на сервер Bungeecord и сервера сети Bungeecord плагин <a rel="nofollow" href="https://www.spigotmc.org/resources/commandsync.52093/" target="_blank">Command Sync</a>.<br>
+            2. Настройте Command Sync, согласно инструкции на странице плагина.<br>
+            3. Далее в настройках товара впишите команду выдачи. Например: sync console all op %username%.<br>
+            4. Теперь <a href="#mc_default">настройте подключение</a> к какому-нибудь любому серверу в сети Bungeecord.<br>
+            Великолепно! Теперь, при покупке товара, будет выполняться команда /op %username% на всех серверах.
+        </p>
+    </li>
+</ul>
+<h3 id="mc_err">Проверка работы RCON и частые ошибки</h3>
+<p>
+    При успешной настройке RCON, при запуске сервера должна быть примерно следующая строка в файле лога запуска и в консоли:
+    <pre>RCON running on 0.0.0.0:4445</pre>
+    Если вы не видите данную строку при запуске, то:
+    <ul class="list">
+        <li>Проверьте, обновили ли вы файл server.properties с новыми данными на хостинге</li>
+        <li>Возможно, этот порт уже занят. Попробуйте сменить порт в server.properties и в настройках магазина</li>
+    </ul>
+    Во всяком случае, если у вас не получается настроить RCON, обратитесь в техническую поддержку вашего хостинга.
+
+<h2 id="samp">San Andreas Multiplayer</h2>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Откройте файл server.cfg в корневой папке сервера (возможно, просто файл server).<br>
+    2. Найдите строку rcon_password<br>
+    3. Поставьте после нее пробел и напишите "ключ_магазина" со страницы "мои магазины".<br>
+    4. Сделайте рестарт сервера.<br>
+    5. Укажите порт сервера в поле "порт RCON", в настройках магазина.<br>
+    Просто. Не правда ли?<br>
+</p>
+<div class="show-pre">
+    <span class="link">Пример успешно настроенного конфига для San Andreas Multiplayer</span>
+    <pre>echo Executing Server Config...
+lanmode 0
+rcon_password Ваш_ключ
+maxplayers 40
+bind 127.0.0.1
+port 7804
+hostname Server
+gamemode0 grandlarc 1
+filterscripts base gl_actions gl_property gl_realtime
+announce 0
+query 1
+weburl example.com
+maxnpc 0
+onfoot_rate 40
+incar_rate 40
+weapon_rate 40
+stream_distance 300.0
+stream_rate 1000</pre>
+</div>
+<h2 id="unturned">Unturned</h2>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Для поддержки RCON установите модификацию RocketMod.<br>
+    2. Затем найдите файл <span class="mark">Unturned\ваш_сервер\Rocket\Rocket.config.xml</span> или что-то подобное<br>
+    3. В открытом файле, примерно в 3 строке содержится следующее: <span class="mark">&lt;RCON Enabled=&quot;false&quot; Port=&quot;27115&quot; Password=&quot;changeme&quot; /&gt;</span>.<br>
+    4. Установите следующие значения: <span class="mark">Enabled="true"</span>, <span class="mark">Port="4445"</span> или любой другой (если указываете другой порт, то так же укажите его в настройках магазина, в поле "порт RCON"), <span class="mark">Password="ключ_магазина"</span>, где ключ_магазина - это ключ со страницы "мои магазины"<br>
+    5. Сделайте рестарт сервера.<br>
+    Все готово! Такие дела.<br>
+</p>
+<div class="show-pre">
+    <span class="link">Пример успешно настроенного конфига для Unturned</span>
+    <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RocketSettings xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+  &lt;RCON Enabled=&quot;true&quot; Port=&quot;4445&quot; Password=&quot;ключ_магазина&quot; /&gt;
+  &lt;AutomaticShutdown Enabled=&quot;false&quot; Interval=&quot;86400&quot; /&gt;
+  &lt;WebConfigurations Enabled=&quot;false&quot; Url=&quot;&quot; /&gt;
+  &lt;WebPermissions Enabled=&quot;false&quot; Url=&quot;&quot; Interval=&quot;180&quot; /&gt;
+  &lt;LanguageCode&gt;en&lt;/LanguageCode&gt;
+  &lt;MaxFrames&gt;60&lt;/MaxFrames&gt;
+&lt;/RocketSettings&gt;</pre>
+</div>
+<h2 id="ark">ARK: Survival Evolved</h2>
+<p>
+    Начиная с патча 185.0 ваш сервер поддерживает протокол RCON. Для начала работы его необходимо настроить.<br>
+    1. Добавьте следующие параметры в команду старта сервера:
+    <pre>?RCONEnabled=True?RCONPort=4445?ServerAdminPassword=ключ_магазина</pre>
+    Где "ключ_магазина" это ключ со страницы "мои магазины".<br>
+    На этом все, вы молодец!<br>
+
+<h2 id="rust">Rust</h2>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Откройте файл server.cfg (возможно, просто файл server).<br>
+    2. Найдите строку rcon.password. Если такая строка отсутствует, то добавьте ее.<br>
+    3. Установите значение строки, равное "ключ_магазина" со страницы "мои магазины". Должно получиться что-то вроде такого:
+    <pre>rcon.password "ключ_магазина"</pre>
+    4. Удостоверьтесь, что значение rcon.web равно 0. Это необходимо для работы выдачи через сервис.<br>
+    5. Сделайте рестарт сервера.<br>
+    6. Укажите порт_сервера + 1, либо альтернативный порт, если он установлен в строке rcon.port, в поле "порт RCON", в настройках магазина. Например: у вашего сервера порт 10000 и не установлена строка rcon.port, соответственно, в поле "порт RCON" необходимо указать 10001.<br>
+    Отлично! Ваш сервер сервер Rust настроен.<br>
+
+<h2 id="mta">Multi Theft Auto</h2>
+<p>
+    В силу некоторых особенностей Multi Theft Auto настройка будет происходить следующим образом:<br>
+    1. Для начала необходимо открыть файл <span class="mark">mods/deathmatch/acl.xml</span>.<br>
+    2. Найдите группу Admin и в данную группу добавьте следующий код:<br>
+    <pre>&lt;object name=&quot;user.trademc&quot;&gt;&lt;/object&gt;</pre>
+    3. Теперь откройте файл <span class="mark">mods/deathmatch/mtaserver.conf</span>.<br>
+    4. В этом файле найдите опцию httpport и укажите в ней порт 4445 или другой, если он указан в настройках магазина в поле "порт RCON":<br>
+    <pre>&lt;httpport&gt;4445&lt;/httpport&gt;</pre>
+    5. Если у вас включена опция auth_serial_http для группы Admin, то добавьте в исключения IP-адрес Trade MC (79.137.70.179) в опции auth_serial_http_ip_exceptions в этом же файле через запятую к уже имеющимся IP-адресам, например:<br>
+    <pre>&lt;auth_serial_http_ip_exceptions&gt;127.0.0.1,79.137.70.179&lt;/auth_serial_http_ip_exceptions&gt;</pre>
+    6. Далее запустите сервер.<br>
+    7. С помощью данной команды в консоли сервера добавьте пользователя trademc с паролем ключ_магазина, где ключ_магазина - это ключ магазина со страницы "мои магазины":<br>
+    <pre>addaccount trademc ключ_магазина</pre>
+	8. Теперь осталось разобраться с синтаксисом команд, которые необходимо указывать в товарах. "Начинка" сервера состоит из различных ресурсов, каждый из которых имеет ряд различных функций. 
+	Обычно, самые необходимые функции вынесены в файл <span class="mark">mods/deathmatch/resources/РЕСУРС/meta.xml</span>, но не все из них могут быть доступны удаленно. 
+	Однако это легко исправить, указав в свойстве функции http="true", например:
+	<pre>&lt;meta&gt; 
+    &lt;!-- Какая-то информация об ресурсе... --&gt; 
+    
+    &lt;!-- Необходима нам функция &quot;myFunction&quot; в ресурсе &quot;myResource&quot;. Устанавливаем ей http=&quot;true&quot; --&gt;
+    &lt;export function=&quot;myFunction&quot; type=&quot;server&quot; http=&quot;true&quot; /&gt; 
+    
+    &lt;!-- ...опять какая-то информация об ресурсе --&gt; 
+&lt;/meta&gt; </pre>
+	После этого необходимо перезагрузить ресурс. После этого появится возможность к нему обратиться, указав в товаре команду вида: "ресурс функция аргументы". На нашем примере это будет так:
+	<pre>myResource myFunction аргумент1 аргумент2 аргумент3...</pre>
+	Также для работоспособности необходимо, чтобы функция выполнялась на сервере (type="server").
+
+<p>Все готово. Прекрасная работа!</p>
+<h2 id="7daystodie">7 Days to Die</h2>
+<p>
+    Для начала работы вам необходимо настроить Telnet.<br>
+    1. Откройте файл <span class="mark">serverconfig.xml</span> (возможно, просто файл serverconfig).<br>
+    2. Найдите свойство TelnetEnabled и убедитесь, что его значение равняется true.<br>
+    <pre>&lt;property name=&quot;TelnetEnabled&quot; value=&quot;true&quot;/&gt;</pre>
+    3. В свойстве TelnetPort укажите порт 4445 или любой другой, если он указан в настройках магазина в поле "порт RCON".<br>
+    <pre>&lt;property name=&quot;TelnetPort&quot; value=&quot;4445&quot;/&gt;</pre>
+    4. Установите значение свойства TelnetPassword равное "ключ_магазина" со страницы "мои магазины".<br>
+    <pre>&lt;property name=&quot;TelnetPassword&quot; value=&quot;ключ_магазина&quot;/&gt;</pre>
+    5. Сделайте рестарт вашего сервера.<br>
+    Больше шагов нет, сервер успешно настроен!<br>
+
+<div class="show-pre">
+    <span class="link">Пример блока успешно настроенного файла конфигурации для 7 Days to Die</span>
+    <pre>&lt;property name=&quot;TelnetEnabled&quot;                  value=&quot;true&quot;/&gt;
+&lt;property name=&quot;TelnetPort&quot;                     value=&quot;4445&quot;/&gt;
+&lt;property name=&quot;TelnetPassword&quot;                 value=&quot;ключ_магазина&quot;/&gt;
+&lt;property name=&quot;TelnetFailedLoginLimit&quot;         value=&quot;10&quot;/&gt;
+&lt;property name=&quot;TelnetFailedLoginsBlocktime&quot;    value=&quot;10&quot;/&gt; </pre>
+</div>
+<h2 id="other">Остальные игры</h2>
+<p>
+    Для начала работы вам необходимо настроить RCON.<br>
+    1. Откройте файл server.cfg (возможно, просто файл server).<br>
+    2. Найдите строку rcon_password, либо rcon.password<br>
+    3. Установите ее значение, равное "ключ_магазина" со страницы "мои магазины".<br>
+    4. Сделайте рестарт сервера.<br>
+    5. Укажите порт сервера в поле "порт RCON", в настройках магазина.<br>
+    Отлично! Ваш сервер успешно настроен.<br>
+</p>
+<h2 id="mysql">MySQL</h2>
+<p>
+    Чтобы мы могли обращаться к вашему серверу MySQL — необходимо его настроить.<br>
+    1. Создайте пользователя trademc с паролем, равным ключ_магазина, где ключ_магазина - это ключ магазина со страницы "мои магазины". Сделать это можно, например, вот так:<br>
+    <pre>CREATE USER 'trademc'@'trademc.org' IDENTIFIED BY 'ключ_магазина';</pre>
+    2. Теперь необходимо задать права только что созданному пользователю базы. Делается это вот так:<br>
+    <pre>GRANT INSERT,UPDATE,DELETE ON * TO 'trademc'@'trademc.org';</pre>
+    3. Укажите порт сервера MySQL в поле "порт MySQL" в настройках магазина (обычно это порт 3306).<br>
+    4. Чтобы манипулировать таблицами вашего сервера MySQL, необходимо указывать соответствующие запросы в командах товара. Однако, чтобы обратиться к таблицам какой-либо базы данных, сперва необходимо отправить запрос на выбор базы данных вида <span class="mark">USE база_данных</span>. После этого уже можно обращаться к таблицам выбранной базы данных. Пример:
+    <pre>USE db_1
+INSERT INTO users VALUES('%username%')
+USE db_2
+INSERT INTO players VALUES('%username%')</pre>
+    Отлично! MySQL настроен и готов принимать запросы.<br>
+                </div>
+            </main>
+            <footer>
+                <div class="wrapper clear-fix">
+	                <div class="footer-content">
+	                    <nav class="clear-fix">
+	                        <ul>
+	                            <li>Начало</li>
+	                            <li><a href="index.htm">Главная</a></li>
+	                            <li><a href="autodonate.html">Игры</a></li>
+	                            <li><a href="about.html">О сервисе</a></li>
+	                            <li><a href="faq.html">ЧаВо</a></li>
+	                            <li><a href="catalog.html">Каталог проектов</a></li>
+	                            <li><a href="feedback.html">Обратная связь</a></li>
+	                        </ul>
+	                        <ul>
+	                            <li>Управление</li>
+	                            <li><a href="https://panel.trademc.org/registration">Регистрация</a></li>
+	                            <li><a href="https://panel.trademc.org/login">Вход в панель</a></li>
+	                        </ul>
+	                        <ul>
+	                            <li>Мы</li>
+	                            <li><a rel="nofollow" target="_blank" href="https://vk.com/trademc">Вконтакте</a></li>
+	                            <li><a rel="nofollow" target="_blank" href="https://twitter.com/Trade_MC">Твиттер</a></li>
+	                            <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UCE9FDfAm-CmI0p5PX59PkNA">YouTube</a></li>
+	                        </ul>
+	                        <ul>
+	                            <li>Документы</li>
+	                            <li><a href="agreement.html">Соглашение об использовании сервиса</a></li>
+	                            <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+	                            <li><a href="agency.html">Агентский договор</a></li>
+	                            <li><a href="donation-agreement.html">Договор пожертвования</a></li>
+	                            <li><a href="card-payment-policy.html">Оплата банковской картой</a></li>
+	                        </ul>
+	                    </nav>
+	                    <div class="content">
+	                        <h3>Trade MC</h3>
+	                        Сервис создания площадок по приему<br>
+	                        пожертвований для владельцев игровых серверов.<br><br>
+	                        Напишите нам: <a href="mailto:admin@trademc.org">admin@trademc.org</a><br>
+	                        <a href="index.htm">Trade MC</a> &copy; 2015-2021	                        <div class="content-images disable-link">
+		                        <img src="statics\images\visa.svg" alt="">
+		                        <img src="statics\images\mastercard.svg" alt="">
+		                        <img src="statics\images\mir.svg" alt="">
+		                        <img src="statics\images\paykeeper.svg" alt="">
+		                        
+	<!--
+	                            <a href="https://www.interkassa.com/" title="INTERKASSA" target="_blank">
+	                                <img src="/statics/images/ik_88x31_01.gif" alt="INTERKASSA">
+	                            </a>
+	                            <a href="http://www.megastock.ru/" target="_blank">
+	                                <img src="/statics/images/wm1.png" alt="">
+	                            </a>
+	                            <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=141216735791" target="_blank">
+	                                <img src="/statics/images/wm2.png" alt="">
+	                            </a>
+	-->
+	                        </div>
+	                    </div>
+	                </div>
+                    <div class="ip-info">
+                        ИП Журавлев Александр Евгеньевич. ИНН: 665814561560. ОГРНИП: 321665800023199. Российская Федерация, Екатеринбург. Мы используем файлы cookie, подробнее — <a href="privacy-policy.html">в политике конфиденциальности и обработки персональных данных</a>. Продолжая использование сайта, вы выражаете свое согласие на их обработку.
+                    </div>
+                </div>
+            </footer>
+    	</div>
+        <script>
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter28416256 = new Ya.Metrika({
+                            id:28416256,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true,
+                            webvisor:true,
+                            trackHash:true
+                        });
+                    } catch(e) { }
+                });
+        
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+        
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/28416256" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+        <script src="statics\js\jquery-3.1.1.min.js"></script>
+        <script src="statics\js\script.js"></script>
+	</body>
+</html>
